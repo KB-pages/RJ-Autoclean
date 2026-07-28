@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RJ Auto Clean Automotive | Estética Automotiva</title>
+
+<meta name="description" content="Lavagem automotiva profissional em Campina Grande-PB. Lavagem completa, detalhamento, higienização interna e revitalização de plásticos.">
+
+<meta name="theme-color" content="#071C3A">
+
+<link rel="icon" type="image/png" href="imagens/1.png">
+<link rel="apple-touch-icon" href="imagens/1.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+/*=========================
+RESET / BASE
+=========================*/
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+html{
+	scroll-behavior:smooth;
+	scroll-padding-top:90px;
+}
+
+body{
+	font-family:'Inter',sans-serif;
+	background:#071C3A;
+	color:#fff;
+	overflow-x:hidden;
+}
+
+img{
+	max-width:100%;
+	display:block;
+}
+
+a{
+	text-decoration:none;
+	color:inherit;
+}
+
+.container{
+	width:min(1200px,92%);
+	margin:auto;
+}
+
+:root{
+	--primary:#071C3A;
+	--secondary:#D9A441;
+	--white:#ffffff;
+	--text:#d8d8d8;
+	--radius:18px;
+	--transition:.35s ease;
+}
+
+section{
+	padding:120px 0;
+}
+
+.section-title{
+	text-align:center;
+	margin-bottom:70px;
+}
+
+.section-title span{
+	color:var(--secondary);
+	font-weight:700;
+	letter-spacing:2px;
+}
+
+.section-title h2{
+	font-family:Poppins;
+	font-size:2.8rem;
+	margin-top:15px;
+}
+
+/*=========================
+HEADER
+=========================*/
+
+header{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	z-index:1000;
+	transition:.4s;
+}
+
+header.active{
+	background:rgba(7,28,58,.93);
+	backdrop-filter:blur(12px);
+	box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+nav{
+	height:90px;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	position:relative;
+}
+
+.logo img{
+	height:70px;
+}
+
+.menu{
+	display:flex;
+	gap:40px;
+	list-style:none;
+}
+
+.menu a{
+	font-family:Poppins;
+	font-weight:600;
+	position:relative;
+}
+
+.menu a::after{
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:-6px;
+	width:0;
+	height:2px;
+	background:var(--secondary);
+	transition:.3s;
+}
+
+.menu a:hover::after{
+	width:100%;
+}
+
+.actions{
+	display:flex;
+	align-items:center;
+	gap:18px;
+}
+
+.instagram{
+	font-size:24px;
+	transition:.3s;
+}
+
+.instagram:hover{
+	color:var(--secondary);
+}
+
+.btn{
+	padding:14px 28px;
+	background:var(--secondary);
+	border-radius:50px;
+	font-family:Poppins;
+	font-weight:700;
+	color:#071C3A;
+	transition:.3s;
+}
+
+.btn:hover{
+	transform:translateY(-5px);
+	box-shadow:0 10px 25px rgba(217,164,65,.4);
+}
+
+.menu-toggle{
+	display:none;
+	font-size:32px;
+	cursor:pointer;
+	background:none;
+	border:none;
+	color:#fff;
+}
+
+/*=========================
+HERO
+=========================*/
+
+.hero{
+	height:100vh;
+	display:flex;
+	align-items:center;
+	background:
+		linear-gradient(rgba(7,28,58,.78),rgba(7,28,58,.88)),
+		url("imagens/2.png") center center/cover;
+}
+
+.hero-content{
+	max-width:700px;
+}
+
+.hero h1{
+	font-family:Poppins;
+	font-size:4.3rem;
+	line-height:1.1;
+	margin-bottom:25px;
+}
+
+.hero span{
+	color:var(--secondary);
+}
+
+.hero p{
+	font-size:1.15rem;
+	line-height:1.8;
+	color:#ddd;
+	margin-bottom:40px;
+}
+
+.buttons{
+	display:flex;
+	gap:20px;
+	flex-wrap:wrap;
+}
+
+.btn-outline{
+	padding:14px 28px;
+	border:2px solid #fff;
+	border-radius:50px;
+	transition:.3s;
+	font-family:Poppins;
+	font-weight:600;
+}
+
+.btn-outline:hover{
+	background:#fff;
+	color:#071C3A;
+}
+
+.hero-info{
+	margin-top:60px;
+	display:flex;
+	gap:30px;
+	flex-wrap:wrap;
+}
+
+.hero-info div{
+	display:flex;
+	align-items:center;
+	gap:10px;
+	font-weight:600;
+}
+
+.hero-info i{
+	color:var(--secondary);
+}
+
+/*=========================
+COMO FUNCIONA
+=========================*/
+
+.how-it-works{
+	background:#fff;
+	color:#111;
+}
+
+.steps{
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	gap:30px;
+	margin-top:60px;
+}
+
+.step{
+	background:#fff;
+	padding:40px;
+	border-radius:20px;
+	text-align:center;
+	box-shadow:0 15px 35px rgba(0,0,0,.08);
+	position:relative;
+	transition:.35s;
+}
+
+.step:hover{
+	transform:translateY(-10px);
+}
+
+.number{
+	position:absolute;
+	top:-18px;
+	left:50%;
+	transform:translateX(-50%);
+	width:45px;
+	height:45px;
+	border-radius:50%;
+	background:#D9A441;
+	color:#071C3A;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-weight:bold;
+}
+
+.step i{
+	font-size:50px;
+	color:#D9A441;
+	margin:20px 0;
+}
+
+/*=========================
+DIFERENCIAIS
+=========================*/
+
+.features{
+	background:#071C3A;
+}
+
+.features-grid{
+	display:grid;
+	grid-template-columns:repeat(2,1fr);
+	gap:25px;
+	margin-top:60px;
+}
+
+.feature{
+	background:#10264D;
+	padding:35px;
+	border-radius:18px;
+	text-align:left;
+	display:flex;
+	align-items:flex-start;
+	gap:22px;
+	transition:.35s;
+}
+
+.feature:hover{
+	transform:translateY(-8px);
+}
+
+.feature i{
+	font-size:42px;
+	color:#D9A441;
+	flex-shrink:0;
+}
+
+.feature h3{
+	margin-bottom:10px;
+	font-family:Poppins;
+}
+
+/*=========================
+SOBRE
+=========================*/
+
+.about{
+	background:#fff;
+	color:#111;
+}
+
+.about-grid{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	gap:70px;
+	align-items:center;
+}
+
+.about img{
+	border-radius:20px;
+	box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.about span{
+	color:#D9A441;
+	font-weight:700;
+	letter-spacing:2px;
+}
+
+.about h2{
+	font-family:Poppins;
+	font-size:2.8rem;
+	margin:20px 0;
+}
+
+.about p{
+	line-height:1.8;
+	margin-bottom:20px;
+}
+
+/*=========================
+SERVIÇOS
+=========================*/
+
+.services{
+	background:#f8f8f8;
+	color:#111;
+}
+
+.services-grid{
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	gap:30px;
+	margin-top:60px;
+}
+
+.service-card{
+	background:#fff;
+	padding:40px;
+	border-radius:20px;
+	text-align:center;
+	box-shadow:0 15px 35px rgba(0,0,0,.08);
+	transition:.35s;
+}
+
+.service-card:hover{
+	transform:translateY(-10px);
+}
+
+.service-card i{
+	font-size:48px;
+	color:#D9A441;
+	margin-bottom:20px;
+}
+
+/*=========================
+LAVAGEM A DOMICÍLIO
+=========================*/
+
+.home-service{
+	background:#071C3A;
+}
+
+.home-service .section-title h2{
+	max-width:750px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.home-service-images{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	gap:25px;
+	margin-top:50px;
+}
+
+.home-service-images img{
+	width:100%;
+	height:320px;
+	object-fit:cover;
+	border-radius:20px;
+	box-shadow:0 20px 40px rgba(0,0,0,.25);
+	transition:.35s;
+}
+
+.home-service-images img:hover{
+	transform:scale(1.03);
+}
+
+.home-service-cta{
+	text-align:center;
+	margin-top:50px;
+}
+
+/*=========================
+GALERIA
+=========================*/
+
+.gallery{
+	background:#071C3A;
+}
+
+.gallery-grid{
+	display:grid;
+	grid-template-columns:repeat(4,1fr);
+	gap:20px;
+	margin-top:60px;
+}
+
+.gallery-grid img{
+	width:100%;
+	height:260px;
+	object-fit:cover;
+	border-radius:18px;
+	cursor:pointer;
+	transition:.35s;
+	box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.gallery-grid img:hover{
+	transform:scale(1.05);
+}
+
+#lightbox{
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,.92);
+	justify-content:center;
+	align-items:center;
+	z-index:9999;
+}
+
+#lightbox img{
+	max-width:90%;
+	max-height:90%;
+	border-radius:15px;
+}
+
+#close-lightbox{
+	position:absolute;
+	top:30px;
+	right:40px;
+	font-size:50px;
+	cursor:pointer;
+	color:#fff;
+}
+
+/*=========================
+FAQ
+=========================*/
+
+.faq{
+	background:#f5f5f5;
+	color:#111;
+}
+
+.faq-item{
+	background:#fff;
+	margin-bottom:20px;
+	border-radius:15px;
+	overflow:hidden;
+	box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.faq-question{
+	width:100%;
+	padding:22px;
+	font-size:18px;
+	background:none;
+	border:none;
+	text-align:left;
+	cursor:pointer;
+	font-weight:bold;
+}
+
+.faq-answer{
+	display:none;
+	padding:0 22px 22px;
+	line-height:1.8;
+}
+
+/*=========================
+AGENDAMENTO
+=========================*/
+
+.schedule{
+	background:#071C3A;
+}
+
+.schedule-form{
+	max-width:800px;
+	margin:60px auto 0;
+	background:#10264D;
+	padding:50px;
+	border-radius:20px;
+	box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.form-row{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	gap:25px;
+	margin-bottom:25px;
+}
+
+.form-group{
+	display:flex;
+	flex-direction:column;
+	gap:8px;
+}
+
+.form-group.full{
+	margin-bottom:30px;
+}
+
+.form-group label{
+	font-family:Poppins;
+	font-weight:600;
+	font-size:14px;
+	color:#D9A441;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+	padding:14px 16px;
+	border-radius:10px;
+	border:1px solid rgba(255,255,255,.15);
+	background:#071C3A;
+	color:#fff;
+	font-family:'Inter',sans-serif;
+	font-size:15px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+	color:#8896b3;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+	outline:none;
+	border-color:#D9A441;
+}
+
+.form-group select option{
+	background:#071C3A;
+	color:#fff;
+}
+
+.form-group textarea{
+	resize:vertical;
+	font-family:'Inter',sans-serif;
+}
+
+.schedule-btn{
+	width:100%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	gap:12px;
+	font-size:17px;
+	border:none;
+	cursor:pointer;
+}
+
+/*=========================
+CONTATO
+=========================*/
+
+.contact{
+	background:#fff;
+	color:#111;
+}
+
+.contact-grid{
+	display:grid;
+	grid-template-columns:repeat(2,1fr);
+	gap:25px;
+	margin-top:60px;
+}
+
+.contact-card{
+	padding:35px;
+	border-radius:18px;
+	text-align:center;
+	background:#fff;
+	box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.contact-card i{
+	font-size:45px;
+	color:#D9A441;
+	margin-bottom:20px;
+}
+
+.contact-card h3{
+	margin-bottom:15px;
+	font-family:Poppins;
+}
+
+.contact-card p{
+	line-height:1.7;
+	margin-bottom:20px;
+}
+
+.map{
+	margin-top:70px;
+	border-radius:20px;
+	overflow:hidden;
+	box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.map iframe{
+	width:100%;
+	height:450px;
+	border:0;
+}
+
+/*=========================
+CTA FINAL
+=========================*/
+
+.cta-final{
+	background:#D9A441;
+	text-align:center;
+	color:#071C3A;
+}
+
+.cta-final h2{
+	font-size:3rem;
+	font-family:Poppins;
+	margin-bottom:20px;
+}
+
+.cta-final p{
+	margin-bottom:35px;
+	font-size:18px;
+}
+
+/*=========================
+FOOTER
+=========================*/
+
+footer{
+	background:#06152c;
+	padding:80px 0 30px;
+}
+
+.footer-grid{
+	display:grid;
+	grid-template-columns:2fr 1fr 1fr;
+	gap:50px;
+}
+
+.footer-grid h3{
+	margin-bottom:20px;
+	font-family:Poppins;
+}
+
+.footer-grid a{
+	display:block;
+	margin-bottom:12px;
+	transition:.3s;
+}
+
+.footer-grid a:hover{
+	color:#D9A441;
+}
+
+.copy{
+	margin-top:60px;
+	text-align:center;
+	color:#aaa;
+	font-size:15px;
+}
+
+/*=========================
+BOTÕES FIXOS
+=========================*/
+
+.top-button,
+.whatsapp-fixed{
+	position:fixed;
+	right:25px;
+	width:60px;
+	height:60px;
+	border-radius:50%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size:25px;
+	color:#fff;
+	box-shadow:0 10px 25px rgba(0,0,0,.25);
+	z-index:999;
+	transition:.3s;
+}
+
+.top-button{
+	bottom:100px;
+	background:#071C3A;
+	opacity:0;
+	pointer-events:none;
+}
+
+.whatsapp-fixed{
+	bottom:25px;
+	background:#25D366;
+}
+
+.top-button:hover,
+.whatsapp-fixed:hover{
+	transform:scale(1.1);
+}
+
+/*=========================
+ANIMAÇÕES
+=========================*/
+
+.hidden{
+	opacity:0;
+	transform:translateY(60px);
+	transition:.8s;
+}
+
+.show{
+	opacity:1;
+	transform:translateY(0);
+}
+
+/*=========================
+RESPONSIVO
+=========================*/
+
+@media(max-width:992px){
+
+	.hero h1{
+		font-size:3rem;
+	}
+
+	.steps,
+	.services-grid,
+	.gallery-grid,
+	.footer-grid,
+	.about-grid{
+		grid-template-columns:1fr 1fr;
+	}
+
+	.feature{
+		padding:28px;
+	}
+
+}
+
+@media(max-width:768px){
+
+	.menu{
+		display:none;
+	}
+
+	.menu.mobile-open{
+		display:flex;
+		flex-direction:column;
+		position:absolute;
+		top:100%;
+		left:0;
+		width:100%;
+		background:rgba(7,28,58,.97);
+		backdrop-filter:blur(12px);
+		padding:25px 30px;
+		gap:22px;
+		box-shadow:0 20px 30px rgba(0,0,0,.3);
+	}
+
+	.actions .btn{
+		display:none;
+	}
+
+	.menu-toggle{
+		display:block;
+	}
+
+	.hero{
+		text-align:center;
+	}
+
+	.hero-info{
+		justify-content:center;
+	}
+
+	.form-row{
+		grid-template-columns:1fr;
+	}
+
+	.schedule-form{
+		padding:30px 25px;
+	}
+
+	.home-service-images{
+		grid-template-columns:1fr;
+	}
+
+	.home-service-images img{
+		height:240px;
+	}
+
+	.steps,
+	.features-grid,
+	.services-grid,
+	.gallery-grid,
+	.contact-grid,
+	.footer-grid,
+	.about-grid{
+		grid-template-columns:1fr;
+	}
+
+	.feature{
+		text-align:center;
+		flex-direction:column;
+		align-items:center;
+	}
+
+	.hero h1{
+		font-size:2.4rem;
+	}
+
+	.section-title h2{
+		font-size:2rem;
+	}
+
+	.cta-final h2{
+		font-size:2rem;
+	}
+
+	nav{
+		height:75px;
+	}
+
+	.logo img{
+		height:58px;
+	}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ===================================================
+HEADER
+=================================================== -->
+
+<header id="header">
+
+	<div class="container">
+
+		<nav>
+
+			<a href="#" class="logo">
+				<img src="imagens/1.png">
+			</a>
+
+			<ul class="menu">
+				<li><a href="#">Início</a></li>
+				<li><a href="#sobre">Sobre</a></li>
+				<li><a href="#servicos">Serviços</a></li>
+				<li><a href="#galeria">Galeria</a></li>
+				<li><a href="#agendamento">Agendamento</a></li>
+				<li><a href="#contato">Contato</a></li>
+			</ul>
+
+			<div class="actions">
+
+				<a class="instagram" target="_blank" href="https://instagram.com/rjauto_clean">
+					<i class="fab fa-instagram"></i>
+				</a>
+
+				<a class="btn" target="_blank" href="https://wa.me/5583993169622">
+					Agendar
+				</a>
+
+				<button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+					<i class="fas fa-bars"></i>
+				</button>
+
+			</div>
+
+		</nav>
+
+	</div>
+
+</header>
+
+<!-- ===================================================
+HERO
+=================================================== -->
+
+<section class="hero">
+
+	<div class="container">
+
+		<div class="hero-content">
+
+			<h1>
+				Seu automóvel
+				<span>impecável</span>
+				em cada detalhe.
+			</h1>
+
+			<p>
+				Especialistas em lavagem automotiva, higienização interna, revitalização de plásticos e cuidados completos para deixar seu veículo com aparência de novo.
+			</p>
+
+			<div class="buttons">
+
+				<a href="https://wa.me/5583993169622" class="btn">
+					Agendar Agora
+				</a>
+
+				<a href="#servicos" class="btn-outline">
+					Conhecer Serviços
+				</a>
+
+			</div>
+
+			<div class="hero-info">
+
+				<div>
+					<i class="fas fa-star"></i>
+					Qualidade
+				</div>
+
+				<div>
+					<i class="fas fa-car"></i>
+					Serviço Premium
+				</div>
+
+				<div>
+					<i class="fas fa-credit-card"></i>
+					Pix • Cartão
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<!-- ===================================================
+COMO FUNCIONA
+=================================================== -->
+
+<section class="how-it-works">
+
+	<div class="container">
+
+		<div class="section-title">
+			<span>COMO FUNCIONA</span>
+			<h2>Seu carro impecável em apenas 3 passos</h2>
+		</div>
+
+		<div class="steps">
+
+			<div class="step">
+				<div class="number">1</div>
+				<i class="fas fa-list-check"></i>
+				<h3>Escolha o serviço</h3>
+				<p>Selecione a lavagem ideal para o seu veículo ou fale conosco para receber uma indicação.</p>
+			</div>
+
+			<div class="step">
+				<div class="number">2</div>
+				<i class="fab fa-whatsapp"></i>
+				<h3>Agende</h3>
+				<p>Entre em contato pelo WhatsApp ou venha diretamente ao local de atendimento.</p>
+			</div>
+
+			<div class="step">
+				<div class="number">3</div>
+				<i class="fas fa-car-side"></i>
+				<h3>Receba seu veículo</h3>
+				<p>Seu automóvel limpo, brilhando e cuidado nos mínimos detalhes.</p>
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<!-- ===================================================
+DIFERENCIAIS
+=================================================== -->
+
+<section class="features">
+
+	<div class="container">
+
+		<div class="section-title">
+			<span>POR QUE ESCOLHER A RJ AUTO CLEAN</span>
+			<h2>Qualidade em cada detalhe</h2>
+		</div>
+
+		<div class="features-grid">
+
+			<div class="feature">
+				<i class="fas fa-user-check"></i>
+				<h3>Atendimento Personalizado</h3>
+				<p>Todo o serviço é realizado pelo próprio proprietário, garantindo atenção total ao seu veículo.</p>
+			</div>
+
+			<div class="feature">
+				<i class="fas fa-spray-can-sparkles"></i>
+				<h3>Produtos Profissionais</h3>
+				<p>Utilizamos produtos de qualidade para proteger a pintura e proporcionar excelente acabamento.</p>
+			</div>
+
+			<div class="feature">
+				<i class="fas fa-medal"></i>
+				<h3>Acabamento Premium</h3>
+				<p>Mais brilho, limpeza e cuidado para que seu carro tenha aparência de novo.</p>
+			</div>
+
+			<div class="feature">
+				<i class="fas fa-clock"></i>
+				<h3>Agilidade</h3>
+				<p>Atendimento rápido, organizado e com total compromisso com o prazo combinado.</p>
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<!-- ===================================================
+SOBRE
+=================================================== -->
+
+<section class="about" id="sobre">
+
+	<div class="container about-grid">
+
+		<div class="about-image">
+			<img src="imagens/3.png" alt="RJ Auto Clean">
+		</div>
+
+		<div class="about-text">
+
+			<span>QUEM SOMOS</span>
+
+			<h2>
+				Muito mais do que uma simples lavagem.
+			</h2>
+
+			<p>
+				Na RJ Auto Clean Automotive cada veículo recebe atenção especial para entregar um acabamento impecável. Trabalhamos com dedicação, utilizando produtos de qualidade e técnicas que valorizam o seu automóvel.
+			</p>
+
+			<p>
+				Nosso compromisso é oferecer um atendimento honesto, eficiente e um resultado que supere suas expectativas.
+			</p>
+
+			<a href="https://wa.me/5583993169622" class="btn" target="_blank">
+				Solicitar Atendimento
+			</a>
+
+		</div>
+
+	</div>
+
+</section>
+
+<!-- ===================================================
+SERVIÇOS
+=================================================== -->
+
+<section id="servicos" class="services">
+
+	<div class="container">
+
+		<div class="section-title">
+			<span>SERVIÇOS</span>
+			<h2>Conheça nossos serviços</h2>
+		</div>
+
+		<div class="services-grid">
+
+			<div class="service-card">
+				<i class="fas fa-car"></i>
+				<h3>Lavagem Simples</h3>
+				<p>Limpeza externa rápida com excelente acabamento.</p>
+			</div>
+
+			<div class="service-card">
+				<i class="fas fa-soap"></i>
+				<h3>Lavagem Completa</h3>
+				<p>Limpeza interna e externa para renovar seu veículo.</p>
+			</div>
+
+			<div class="service-card">
+				<i class="fas fa-star"></i>
+				<h3>Lavagem Detalhada</h3>
+				<p>Cuidado minucioso para quem busca um resultado premium.</p>
+			</div>
+
+			<div class="service-card">
+				<i class="fas fa-couch"></i>
+				<h3>Higienização Interna</h3>
+				<p>Limpeza profunda dos bancos, carpetes e interior.</p>
+			</div>
+
+			<div class="service-card">
+				<i class="fas fa-brush"></i>
+				<h3>Revitalização de Plásticos</h3>
+				<p>Recupere o aspecto original das peças plásticas internas e externas.</p>
+			</div>
+
+			<div class="service-card">
+				<i class="fas fa-plus-circle"></i>
+				<h3>Muito Mais</h3>
+				<p>Consulte-nos para conhecer todos os serviços disponíveis.</p>
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<!-- ===================================================
+LAVAGEM A DOMICÍLIO
+=================================================== -->
+
+<section class="home-service" id="domicilio">
+
+	<div class="container">
+
+		<div class="section-title">
+			<span>SERVIÇO DIFERENCIADO</span>
+			<h2>Serviços diferenciados! Fale conosco e agende uma lavagem a domicílio!</h2>
+		</div>
+
+		<div class="home-service-images">
+			<img src="imagens/12.png" alt="Lavagem a domicílio realizada pela RJ Auto Clean">
+			<img src="imagens/13.png" alt="Lavagem a domicílio realizada pela RJ Auto Clean">
+		</div>
+
+		<div class="home-service-cta">
+			<a href="https://wa.me/5583993169622" target="_blank" class="btn">
+				Agendar Lavagem a Domicílio
+			</a>
+		</div>
+
+	</div>
+
+</section>
+
+<!-- ===================================================
+GALERIA
+=================================================== -->
+
+<section class="gallery" id="galeria">
+
+	<div class="container">
+
+		<div class="section-title">
+			<span>GALERIA</span>
+			<h2>Resultados que falam por si</h2>
+			<p>
+				Confira alguns veículos que já passaram pela RJ Auto Clean Automotive.
+			</p>
+		</div>
+
+		<div class="gallery-grid">
+			<img src="imagens/4.png" alt="">
+			<img src="imagens/5.png" alt="">
+			<img src="imagens/6.png" alt="">
+			<img src="imagens/7.png" alt="">
+			<img src="imagens/8.png" alt="">
+			<img src="imagens/9.png" alt="">
+			<img src="imagens/10.png" alt="">
+			<img src="imagens/11.png" alt="">
+		</div>
+
+	</div>
+
+</section>
+
+<!-- Lightbox -->
+
+<div id="lightbox">
+	<span id="close-lightbox">&times;</span>
+	<img id="lightbox-img">
+</div>
+
+<!-- ===================================================
+FAQ
+=================================================== -->
+
+<section class="faq">
+
+	<div class="container">
+
+		<div class="section-title">
+			<span>DÚVIDAS</span>
+			<h2>Perguntas Frequentes</h2>
+		</div>
+
+		<div class="faq-item">
+			<button class="faq-question">
+				Precisa agendar?
+			</button>
+			<div class="faq-answer">
+				<p>
+					Não é obrigatório. Você pode chegar diretamente ou agendar pelo WhatsApp.
+				</p>
+			</div>
+		</div>
+
+		<div class="faq-item">
+			<button class="faq-question">
+				Quais formas de pagamento?
+			</button>
+			<div class="faq-answer">
+				<p>
+					Pix, dinheiro, cartão de débito e cartão de crédito.
+				</p>
+			</div>
+		</div>
+
+		<div class="faq-item">
+			<button class="faq-question">
+				Quanto tempo demora?
+			</button>
+			<div class="faq-answer">
+				<p>
+					O tempo depende do serviço escolhido. Informamos tudo antes de iniciar.
+				</p>
+			</div>
+		</div>
+
+	</div>
+
+</section>
+
+<!-- ===================================================
+AGENDAMENTO
+=================================================== -->
+
+<section class="schedule" id="agendamento">
+
+	<div class="container">
+
+		<div class="section-title">
+			<span>AGENDAMENTO</span>
+			<h2>Agende seu atendimento em poucos cliques</h2>
+			<p>
+				Preencha os dados abaixo e finalize o agendamento direto pelo WhatsApp.
+			</p>
+		</div>
+
+		<form class="schedule-form" id="scheduleForm">
+
+			<div class="form-row">
+
+				<div class="form-group">
+					<label for="scheduleName">Nome completo</label>
+					<input type="text" id="scheduleName" placeholder="Seu nome" required>
+				</div>
+
+				<div class="form-group">
+					<label for="scheduleService">Serviço desejado</label>
+					<select id="scheduleService" required>
+						<option value="" disabled selected>Selecione um serviço</option>
+						<option>Lavagem Simples</option>
+						<option>Lavagem Completa</option>
+						<option>Lavagem Detalhada</option>
+						<option>Higienização Interna</option>
+						<option>Revitalização de Plásticos</option>
+						<option>Outro / Ainda não sei</option>
+					</select>
+				</div>
+
+			</div>
+
+			<div class="form-row">
+
+				<div class="form-group">
+					<label for="scheduleDate">Data preferida</label>
+					<input type="date" id="scheduleDate" required>
+				</div>
+
+				<div class="form-group">
+					<label for="scheduleTime">Horário preferido</label>
+					<input type="time" id="scheduleTime" required>
+				</div>
+
+			</div>
+
+			<div class="form-group full">
+				<label for="scheduleNotes">Observações (opcional)</label>
+				<textarea id="scheduleNotes" rows="3" placeholder="Modelo do carro, cor, alguma informação adicional..."></textarea>
+			</div>
+
+			<button type="submit" class="btn schedule-btn">
+				<i class="fab fa-whatsapp"></i>
+				Agendar pelo WhatsApp
+			</button>
+
+		</form>
+
+	</div>
+
+</section>
+
+<!-- ===================================================
+CONTATO
+=================================================== -->
+
+<section class="contact" id="contato">
+
+	<div class="container">
+
+		<div class="section-title">
+			<span>CONTATO</span>
+			<h2>Entre em contato</h2>
+			<p>
+				Será um prazer cuidar do seu veículo.
+			</p>
+		</div>
+
+		<div class="contact-grid">
+
+			<div class="contact-card">
+				<i class="fas fa-location-dot"></i>
+				<h3>Endereço</h3>
+				<p>
+					Rua Passista Nicodemos Lima Silva, 110
+					<br>
+					CEP: 58421-553
+					<br>
+					Campina Grande - PB
+				</p>
+			</div>
+
+			<div class="contact-card">
+				<i class="fab fa-whatsapp"></i>
+				<h3>WhatsApp</h3>
+				<p>
+					(83) 99316-9622
+				</p>
+				<a target="_blank" href="https://wa.me/5583993169622" class="btn">
+					Conversar Agora
+				</a>
+			</div>
+
+			<div class="contact-card">
+				<i class="fab fa-instagram"></i>
+				<h3>Instagram</h3>
+				<p>
+					@rjauto_clean
+				</p>
+				<a target="_blank" href="https://www.instagram.com/rjauto_clean" class="btn-outline">
+					Visitar Perfil
+				</a>
+			</div>
+
+			<div class="contact-card">
+				<i class="far fa-clock"></i>
+				<h3>Horário</h3>
+				<p>
+					Sábado
+					09:00 às 19:00
+					<br><br>
+					Domingo
+					07:00 às 15:00
+				</p>
+			</div>
+
+		</div>
+
+		<div class="map">
+			<iframe
+				src="https://www.google.com/maps?q=Rua%20Passista%20Nicodemos%20Lima%20Silva%20110%20Campina%20Grande&output=embed"
+				loading="lazy"
+				allowfullscreen>
+			</iframe>
+		</div>
+
+	</div>
+
+</section>
+
+<!-- ===================================================
+CTA FINAL
+=================================================== -->
+
+<section class="cta-final">
+
+	<div class="container">
+
+		<h2>
+			Pronto para deixar seu veículo impecável?
+		</h2>
+
+		<p>
+			Agende agora mesmo seu atendimento.
+		</p>
+
+		<a href="https://wa.me/5583993169622" target="_blank" class="btn">
+			Agendar pelo WhatsApp
+		</a>
+
+	</div>
+
+</section>
+
+<!-- ===================================================
+RODAPÉ
+=================================================== -->
+
+<footer>
+
+	<div class="container footer-grid">
+
+		<div>
+			<img src="imagens/1.png" style="width:180px;">
+			<p>
+				Especialistas em estética automotiva.
+			</p>
+		</div>
+
+		<div>
+			<h3>Links</h3>
+			<a href="#">Início</a>
+			<a href="#sobre">Sobre</a>
+			<a href="#servicos">Serviços</a>
+			<a href="#galeria">Galeria</a>
+			<a href="#contato">Contato</a>
+		</div>
+
+		<div>
+			<h3>Contato</h3>
+			<p>(83) 99316-9622</p>
+			<p>@rjauto_clean</p>
+			<p>Campina Grande - PB</p>
+		</div>
+
+	</div>
+
+	<div class="copy">
+		© 2026 RJ Auto Clean Automotive
+		<br>
+		Desenvolvido por Kevin Ribeiro
+	</div>
+
+</footer>
+
+<a href="#" class="top-button">
+	<i class="fas fa-arrow-up"></i>
+</a>
+
+<a href="https://wa.me/5583993169622" target="_blank" class="whatsapp-fixed">
+	<i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ===================================================
+SCRIPTS
+=================================================== -->
+
+<script>
+
+/*=========================
+HEADER
+=========================*/
+
+const header=document.getElementById("header");
+
+window.addEventListener("scroll",()=>{
+
+	if(window.scrollY>80){
+		header.classList.add("active");
+	}else{
+		header.classList.remove("active");
+	}
+
+});
+
+/*=========================
+MENU MOBILE
+=========================*/
+
+const menuToggle=document.getElementById("menuToggle");
+const menu=document.querySelector(".menu");
+
+menuToggle.addEventListener("click",(e)=>{
+
+	e.stopPropagation();
+	menu.classList.toggle("mobile-open");
+
+	const icon=menuToggle.querySelector("i");
+	const isOpen=menu.classList.contains("mobile-open");
+
+	icon.classList.toggle("fa-bars",!isOpen);
+	icon.classList.toggle("fa-xmark",isOpen);
+	menuToggle.setAttribute("aria-expanded",isOpen);
+
+});
+
+document.addEventListener("click",(e)=>{
+
+	if(menu.classList.contains("mobile-open") && !menu.contains(e.target) && e.target!==menuToggle){
+
+		menu.classList.remove("mobile-open");
+		const icon=menuToggle.querySelector("i");
+		icon.classList.add("fa-bars");
+		icon.classList.remove("fa-xmark");
+		menuToggle.setAttribute("aria-expanded","false");
+
+	}
+
+});
+
+/*=========================
+FAQ
+=========================*/
+
+document.querySelectorAll(".faq-question").forEach(button=>{
+
+	button.addEventListener("click",()=>{
+
+		const answer=button.nextElementSibling;
+		const opened=document.querySelector(".faq-answer.show");
+
+		if(opened && opened!==answer){
+			opened.classList.remove("show");
+			opened.style.display="none";
+		}
+
+		if(answer.classList.contains("show")){
+			answer.classList.remove("show");
+			answer.style.display="none";
+		}else{
+			answer.classList.add("show");
+			answer.style.display="block";
+		}
+
+	});
+
+});
+
+/*=========================
+AGENDAMENTO
+=========================*/
+
+const scheduleForm=document.getElementById("scheduleForm");
+const scheduleDate=document.getElementById("scheduleDate");
+
+if(scheduleDate){
+	scheduleDate.min=new Date().toISOString().split("T")[0];
+}
+
+scheduleForm.addEventListener("submit",function(e){
+
+	e.preventDefault();
+
+	const name=document.getElementById("scheduleName").value.trim();
+	const service=document.getElementById("scheduleService").value;
+	const dateValue=document.getElementById("scheduleDate").value;
+	const time=document.getElementById("scheduleTime").value;
+	const notes=document.getElementById("scheduleNotes").value.trim();
+
+	const dateFormatted=dateValue ? dateValue.split("-").reverse().join("/") : "";
+
+	let message="Olá! Gostaria de agendar um atendimento na RJ Auto Clean.\n\n";
+	message+="Nome: "+name+"\n";
+	message+="Serviço: "+service+"\n";
+	message+="Data: "+dateFormatted+"\n";
+	message+="Horário: "+time+"\n";
+
+	if(notes){
+		message+="Observações: "+notes+"\n";
+	}
+
+	message+="\nPoderiam confirmar se há disponibilidade neste dia e horário?";
+
+	const whatsappUrl="https://wa.me/5583993169622?text="+encodeURIComponent(message);
+
+	window.open(whatsappUrl,"_blank");
+
+});
+
+/*=========================
+LIGHTBOX
+=========================*/
+
+const images=document.querySelectorAll(".gallery-grid img");
+const lightbox=document.getElementById("lightbox");
+const lightboxImg=document.getElementById("lightbox-img");
+const close=document.getElementById("close-lightbox");
+
+images.forEach(img=>{
+
+	img.addEventListener("click",()=>{
+		lightbox.style.display="flex";
+		lightboxImg.src=img.src;
+	});
+
+});
+
+close.onclick=()=>{
+	lightbox.style.display="none";
+}
+
+lightbox.onclick=e=>{
+	if(e.target===lightbox){
+		lightbox.style.display="none";
+	}
+}
+
+/*=========================
+BOTÃO TOPO
+=========================*/
+
+const topButton=document.querySelector(".top-button");
+
+window.addEventListener("scroll",()=>{
+
+	if(window.scrollY>500){
+		topButton.style.opacity="1";
+		topButton.style.pointerEvents="auto";
+	}else{
+		topButton.style.opacity="0";
+		topButton.style.pointerEvents="none";
+	}
+
+});
+
+/*=========================
+SCROLL SUAVE
+=========================*/
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+	anchor.addEventListener("click",function(e){
+
+		e.preventDefault();
+		const target=document.querySelector(this.getAttribute("href"));
+
+		if(target){
+			target.scrollIntoView({
+				behavior:"smooth"
+			});
+		}
+
+		menu.classList.remove("mobile-open");
+		const icon=menuToggle.querySelector("i");
+		icon.classList.add("fa-bars");
+		icon.classList.remove("fa-xmark");
+		menuToggle.setAttribute("aria-expanded","false");
+
+	});
+
+});
+
+/*=========================
+ANIMAÇÃO AO ROLAR
+=========================*/
+
+const observer=new IntersectionObserver(entries=>{
+
+	entries.forEach(entry=>{
+		if(entry.isIntersecting){
+			entry.target.classList.add("show");
+		}
+	});
+
+},
+{
+	threshold:.15
+});
+
+document.querySelectorAll("section").forEach(section=>{
+	section.classList.add("hidden");
+	observer.observe(section);
+});
+
+</script>
+
+</body>
+
+</html>
